@@ -6,13 +6,24 @@
     <title>Compact Gallery</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <style>
+        .card {
+            border-radius: 0.5rem; /* Rounded corners for the cards */
+        }
         .card img {
-            border-radius: 0.5rem; /* Rounded corners for the images */
+            border-radius: 0.5rem; /* Rounded corners for images */
             cursor: pointer; /* Indicates that the image is clickable */
         }
         .card-body {
             text-align: center; /* Center-align text inside the card body */
+        }
+        .modal-dialog {
+            max-width: 90%; /* Ensure the modal is responsive */
+        }
+        .modal-body img {
+            width: 100%; /* Ensure the modal image takes full width */
         }
     </style>
 </head>
@@ -28,7 +39,9 @@
         <!-- Card 1 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#lightbox1">
+                <a href="path/to/image1.jpg" data-bs-toggle="modal" data-bs-target="#lightbox1">
+                    <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+                </a>
                 <div class="card-body">
                     <h6 class="card-title">Image 1 Description</h6>
                     <p class="card-text">Details about Image 1.</p>
@@ -38,7 +51,9 @@
         <!-- Card 2 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2" data-bs-toggle="modal" data-bs-target="#lightbox2">
+                <a href="path/to/image2.jpg" data-bs-toggle="modal" data-bs-target="#lightbox2">
+                    <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+                </a>
                 <div class="card-body">
                     <h6 class="card-title">Image 2 Description</h6>
                     <p class="card-text">Details about Image 2.</p>
@@ -48,7 +63,9 @@
         <!-- Card 3 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3" data-bs-toggle="modal" data-bs-target="#lightbox3">
+                <a href="path/to/image3.jpg" data-bs-toggle="modal" data-bs-target="#lightbox3">
+                    <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
+                </a>
                 <div class="card-body">
                     <h6 class="card-title">Image 3 Description</h6>
                     <p class="card-text">Details about Image 3.</p>
@@ -58,7 +75,9 @@
         <!-- Card 4 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="path/to/image4.jpg" class="card-img-top" alt="Image 4" data-bs-toggle="modal" data-bs-target="#lightbox4">
+                <a href="path/to/image4.jpg" data-bs-toggle="modal" data-bs-target="#lightbox4">
+                    <img src="path/to/image4.jpg" class="card-img-top" alt="Image 4">
+                </a>
                 <div class="card-body">
                     <h6 class="card-title">Image 4 Description</h6>
                     <p class="card-text">Details about Image 4.</p>
@@ -68,7 +87,9 @@
         <!-- Card 5 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="path/to/image5.jpg" class="card-img-top" alt="Image 5" data-bs-toggle="modal" data-bs-target="#lightbox5">
+                <a href="path/to/image5.jpg" data-bs-toggle="modal" data-bs-target="#lightbox5">
+                    <img src="path/to/image5.jpg" class="card-img-top" alt="Image 5">
+                </a>
                 <div class="card-body">
                     <h6 class="card-title">Image 5 Description</h6>
                     <p class="card-text">Details about Image 5.</p>
@@ -78,7 +99,9 @@
         <!-- Card 6 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="path/to/image6.jpg" class="card-img-top" alt="Image 6" data-bs-toggle="modal" data-bs-target="#lightbox6">
+                <a href="path/to/image6.jpg" data-bs-toggle="modal" data-bs-target="#lightbox6">
+                    <img src="path/to/image6.jpg" class="card-img-top" alt="Image 6">
+                </a>
                 <div class="card-body">
                     <h6 class="card-title">Image 6 Description</h6>
                     <p class="card-text">Details about Image 6.</p>
@@ -170,5 +193,7 @@
 
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- Optional: Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
