@@ -3,111 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compact Gallery</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Lightbox CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <!-- Custom CSS for styling -->
+    <title>Bootstrap Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .card {
-            border-radius: 10px;
-            overflow: hidden;
+        .block-heading {
+            color: #3b99e0;
+            text-align: center;
             margin-bottom: 20px;
         }
-        .card img {
-            width: 100%;
-            height: auto;
+        
+        .product {
+            margin-bottom: 20px;
         }
-        .card-body {
+        
+        .summary {
+            border-top: 1px solid #5ea4f3;
+            background-color: #f7fbff;
+            padding: 20px;
+        }
+        
+        .summary button {
+            background-color: #3b99e0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
             text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <h2 class="text-center mb-4">Cards Gallery</h2>
+    <div class="container">
+        <h2 class="block-heading">Shopping Cart</h2>
+        
         <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <a href="https://via.placeholder.com/800x600?text=Image1" data-lightbox="gallery">
-                        <img src="https://via.placeholder.com/400x300?text=Image1" class="card-img-top" alt="Image 1">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-title">Description 1</h6>
-                        <p class="card-text">Details about Image 1.</p>
+            <div class="col-lg-8">
+                <div class="product">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Product 1">
+                        </div>
+                        <div class="col">
+                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Product 2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Product 3">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <a href="https://via.placeholder.com/800x600?text=Image2" data-lightbox="gallery">
-                        <img src="https://via.placeholder.com/400x300?text=Image2" class="card-img-top" alt="Image 2">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-title">Description 2</h6>
-                        <p class="card-text">Details about Image 2.</p>
-                    </div>
+                
+                <div class="product">
+                    <!-- Add more product blocks as needed -->
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <a href="https://via.placeholder.com/800x600?text=Image3" data-lightbox="gallery">
-                        <img src="https://via.placeholder.com/400x300?text=Image3" class="card-img-top" alt="Image 3">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-title">Description 3</h6>
-                        <p class="card-text">Details about Image 3.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <a href="https://via.placeholder.com/800x600?text=Image4" data-lightbox="gallery">
-                        <img src="https://via.placeholder.com/400x300?text=Image4" class="card-img-top" alt="Image 4">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-title">Description 4</h6>
-                        <p class="card-text">Details about Image 4.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <a href="https://via.placeholder.com/800x600?text=Image5" data-lightbox="gallery">
-                        <img src="https://via.placeholder.com/400x300?text=Image5" class="card-img-top" alt="Image 5">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-title">Description 5</h6>
-                        <p class="card-text">Details about Image 5.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <a href="https://via.placeholder.com/800x600?text=Image6" data-lightbox="gallery">
-                        <img src="https://via.placeholder.com/400x300?text=Image6" class="card-img-top" alt="Image 6">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-title">Description 6</h6>
-                        <p class="card-text">Details about Image 6.</p>
-                    </div>
+            
+            <div class="col-lg-4">
+                <div class="summary">
+                    <h4>Price Summary</h4>
+                    <p>Subtotal: $100</p>
+                    <p>Shipping: $10</p>
+                    <p>Tax: $5</p>
+                    <hr>
+                    <p>Total: $115</p>
+                    <a href="#" class="btn btn-primary">Proceed to Checkout</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Lightbox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
