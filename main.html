@@ -3,45 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards Gallery</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <title>Compact Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .card {
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
         .card img {
-            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            border-radius: 0.5rem; /* Rounded corners for the images */
+            cursor: pointer; /* Indicates that the image is clickable */
         }
-        h6, p {
-            text-align: center;
+        .card-body {
+            text-align: center; /* Center-align text inside the card body */
         }
     </style>
 </head>
 <body>
 
-<div class="container mt-5">
-    <h2 class="text-center">Cards Gallery</h2>
+<div class="container mt-4">
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h2>Cards Gallery</h2>
+    </div>
+    <!-- Gallery Row -->
     <div class="row">
-        <div class="col-md-4">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
             <div class="card">
-                <a href="https://via.placeholder.com/800x600?text=Image1" data-lightbox="gallery" data-title="Image 1 Description">
-                    <img src="https://via.placeholder.com/300x200?text=Image1" class="card-img-top" alt="Image 1">
-                </a>
+                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#lightbox1">
                 <div class="card-body">
-                    <h6 class="card-title">Image 1</h6>
-                    <p class="card-text">Description for Image 1.</p>
+                    <h6 class="card-title">Image 1 Description</h6>
+                    <p class="card-text">Details about Image 1.</p>
                 </div>
             </div>
         </div>
-        <!-- Add more card elements here -->
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2" data-bs-toggle="modal" data-bs-target="#lightbox2">
+                <div class="card-body">
+                    <h6 class="card-title">Image 2 Description</h6>
+                    <p class="card-text">Details about Image 2.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3" data-bs-toggle="modal" data-bs-target="#lightbox3">
+                <div class="card-body">
+                    <h6 class="card-title">Image 3 Description</h6>
+                    <p class="card-text">Details about Image 3.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="path/to/image4.jpg" class="card-img-top" alt="Image 4" data-bs-toggle="modal" data-bs-target="#lightbox4">
+                <div class="card-body">
+                    <h6 class="card-title">Image 4 Description</h6>
+                    <p class="card-text">Details about Image 4.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="path/to/image5.jpg" class="card-img-top" alt="Image 5" data-bs-toggle="modal" data-bs-target="#lightbox5">
+                <div class="card-body">
+                    <h6 class="card-title">Image 5 Description</h6>
+                    <p class="card-text">Details about Image 5.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="path/to/image6.jpg" class="card-img-top" alt="Image 6" data-bs-toggle="modal" data-bs-target="#lightbox6">
+                <div class="card-body">
+                    <h6 class="card-title">Image 6 Description</h6>
+                    <p class="card-text">Details about Image 6.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<!-- Lightbox Modals -->
+<!-- Lightbox 1 -->
+<div class="modal fade" id="lightbox1" tabindex="-1" aria-labelledby="lightbox1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="path/to/image1.jpg" class="img-fluid" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox 2 -->
+<div class="modal fade" id="lightbox2" tabindex="-1" aria-labelledby="lightbox2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="path/to/image2.jpg" class="img-fluid" alt="Image 2">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox 3 -->
+<div class="modal fade" id="lightbox3" tabindex="-1" aria-labelledby="lightbox3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="path/to/image3.jpg" class="img-fluid" alt="Image 3">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox 4 -->
+<div class="modal fade" id="lightbox4" tabindex="-1" aria-labelledby="lightbox4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="path/to/image4.jpg" class="img-fluid" alt="Image 4">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox 5 -->
+<div class="modal fade" id="lightbox5" tabindex="-1" aria-labelledby="lightbox5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="path/to/image5.jpg" class="img-fluid" alt="Image 5">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox 6 -->
+<div class="modal fade" id="lightbox6" tabindex="-1" aria-labelledby="lightbox6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="path/to/image6.jpg" class="img-fluid" alt="Image 6">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
